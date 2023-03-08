@@ -10,7 +10,7 @@ const NFTCard = ({ key, id, image, title, price, creator }) => {
             {/* {openModal && <div className='absolute top-0 bg-red-800 right-0 w-full h-full' />} */}
             
             <div
-                className='text-gray-50 glass z-10 rounded-xl shadow-md relative cursor-pointer h-[370px]'
+                className='text-gray-50 glass z-10 rounded-xl shadow-md relative lg:cursor-pointer h-[370px]'
                 key={key}
                 
             >
