@@ -12,7 +12,7 @@ const NFTCard = ({ key, id, image, title, price, creator }) => {
             <div
                 className='text-gray-50 glass z-10 rounded-xl shadow-md relative cursor-pointer h-[370px]'
                 key={key}
-                onClick={() => setOpenModal(!openModal)}
+                
             >
                 <img
                     src={image}
@@ -33,6 +33,7 @@ const NFTCard = ({ key, id, image, title, price, creator }) => {
                     <button
                         type='button'
                         className='px-5 text-[11px] py-2 font-medium text-white bg-bg-button rounded-md'
+                        onClick={() => setOpenModal(!openModal)}
                     > View </button>
                 </div>
             </div>
