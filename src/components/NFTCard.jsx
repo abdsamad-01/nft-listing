@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import { nft_1 } from '../assets'
 import Modal from './Modal';
 
-const NFTCard = ({ key, id, image, title, price, creator, handleModal }) => {
-    
+const NFTCard = ({ key, id, image, title, price, creator, handleModal, handleId }) => {
+
     return (
         <div className='relative '>
             {/* {openModal && <div className='absolute top-0 bg-red-800 right-0 w-full h-full' />} */}
-            
+
             <div
                 className='text-gray-50 glass z-10 rounded-xl shadow-md relative lg:cursor-pointer h-[370px]'
                 key={key}
-                
+
             >
                 <img
                     src={image}
@@ -32,7 +32,10 @@ const NFTCard = ({ key, id, image, title, price, creator, handleModal }) => {
                     <button
                         type='button'
                         className='px-5 text-[11px] py-2 font-medium text-white bg-bg-button rounded-md'
-                        onClick={() => handleModal()}
+                        onClick={() => {
+                            handleModal()
+                            handleId(id)
+                        }}
                     > View </button>
                 </div>
             </div>

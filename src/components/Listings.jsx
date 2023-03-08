@@ -10,9 +10,16 @@ import { nftCards } from '../constants'
 
 const Listings = () => {
     const [openModal, setOpenModal] = useState(false);
+    const [cardId, setCardId] = useState('');
+
+    const handleId = (id) => {
+        setCardId(id);
+        console.log(cardId)
+    }
+
     const handleModal = () => {
         setOpenModal(!openModal);
-        console.log(openModal)
+        // console.log(openModal)
     }
 
     return (
@@ -21,7 +28,7 @@ const Listings = () => {
                 <h2 className='md:text-5xl text-4xl font-semibold'> Trending Auctions Just For You </h2>
                 <p className='text-base font-light mt-4 lg:[27%] w-full text-gray-100'> Collections of great aesthetic NFTs from Exclusivit, made and created with GustavoAI </p>
 
-                <div 
+                <div
                     className='bg-gray-50 mt-6 h-9 w-9 flex items-center cursor-pointer justify-center shadow-md rounded-full'
                     onClick={() => window.scrollTo(300, 300)}
                 >
@@ -58,15 +65,17 @@ const Listings = () => {
             {/* NFT Cards */}
             <div className='mt-8 lg:px-5 px-2 md:px-0 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6 relative'>
                 {nftCards.map(card => (
-                    <NFTCard
-                        key={card.id}
-                        id={card.id}
-                        image={card.image}
-                        title={card.title}
-                        price={card.price}
-                        creator={card.creator}
-                        handleModal={handleModal}
-                    />
+                    <div key={card.id}>
+                        <NFTCard
+                            id={card.id}
+                            image={card.image}
+                            title={card.title}
+                            price={card.price}
+                            creator={card.creator}
+                            handleModal={handleModal}
+                            handleId={handleId}
+                        />
+                    </div>
                 ))}
             </div>
 
