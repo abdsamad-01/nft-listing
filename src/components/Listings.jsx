@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 const Listings = () => {
     return (
         <div className='lg:px-16 px-4 md:pt-40 pt-28 text-gray-50'>
-            <div className='flex flex-col items-center justify-center text-center'>
+            <div className='flex flex-col items-center justify-center lg:px-0 px-2 text-center'>
                 <h2 className='md:text-5xl text-4xl font-semibold'> Trending Auctions Just For You </h2>
                 <p className='lg:text-base text-[17px] font-light mt-4 lg:w-1/4 w-full text-gray-100'> Collections of great aesthetic arts from Exclusivit, made and created with GustavoAI </p>
 
