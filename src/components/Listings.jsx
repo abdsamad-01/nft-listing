@@ -9,10 +9,10 @@ import { Link } from 'react-router-dom'
 
 const Listings = () => {
     return (
-        <div className='lg:px-16 px-3 md:pt-40 pt-28 text-gray-50'>
+        <div className='lg:px-16 px-4 md:pt-40 pt-28 text-gray-50'>
             <div className='flex flex-col items-center justify-center text-center'>
                 <h2 className='md:text-5xl text-4xl font-semibold'> Trending Auctions Just For You </h2>
-                <p className='text-[15px] font-light mt-4 lg:w-1/4 w-full text-gray-100'> Collections of great aesthetic arts from Exclusivit, made and created with GustavoAI </p>
+                <p className='lg:text-base text-[17px] font-light mt-4 lg:w-1/4 w-full text-gray-100'> Collections of great aesthetic arts from Exclusivit, made and created with GustavoAI </p>
 
                 <Link 
                     className='bg-gray-50 mt-6 h-10 w-10 flex items-center cursor-pointer justify-center shadow-md rounded-full'
@@ -50,7 +50,7 @@ const Listings = () => {
             </div>
 
             {/* NFT Cards */}
-            <div className='mt-8 px-1 md:px-0 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6 relative'>
+            <div className='mt-8 px-2 md:px-0 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6 relative'>
                 {nftCards.map(card => (
                     <NFTCard
                         key={card.id}

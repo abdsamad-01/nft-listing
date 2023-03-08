@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <nav className='w-full bg-primary text-gray-50 lg:px-16 px-3 py-4 fixed top-0 z-40'>
+        <nav className='w-full bg-primary text-gray-50 lg:px-16 px-4 py-4 fixed top-0 z-40'>
             <div className='flex flex-row items-center justify-between'>
                 {/* Logo */}
                 <div className='flex items-center'>
@@ -17,12 +17,12 @@ const Navbar = () => {
                         }}
                     >
                         <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-                        <span className='text-[15px] font-semibold'> Zomies </span>
+                        <span className='text-base font-semibold'> Zomies </span>
                     </Link>
                 </div>
 
                 {/* Others */}
-                <div className='flex-row items-center justify-between gap-20 mr-10 lg::flex hidden'>
+                <div className='flex-row items-center justify-between gap-20 mr-10 lg:flex hidden'>
                     <ul className='list-none inline'>
                         {navLinks.map(link => (
                             <li

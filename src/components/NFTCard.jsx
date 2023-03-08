@@ -10,14 +10,14 @@ const NFTCard = ({ key, id, image, title, price, creator }) => {
             {/* {openModal && <div className='absolute top-0 bg-red-800 right-0 w-full h-full' />} */}
             
             <div
-                className='text-gray-50 glass z-10 rounded-xl shadow-md relative cursor-pointer h-[350px]'
+                className='text-gray-50 glass z-10 rounded-xl shadow-md relative cursor-pointer h-[370px]'
                 key={key}
                 onClick={() => setOpenModal(!openModal)}
             >
                 <img
                     src={image}
                     alt={id}
-                    className='rounded-t-xl w-full h-[60%] object-cover'
+                    className='rounded-t-xl w-full h-[65%] object-cover'
                 />
                 <div className='flex flex-col p-2'>
                     <p className='text-lg font-semibold'> {title} </p>
@@ -26,8 +26,8 @@ const NFTCard = ({ key, id, image, title, price, creator }) => {
 
                 <div className='flex flex-row items-center justify-between mt-4 p-2'>
                     <div className='flex flex-col'>
-                        <span className='text-xs text-gray-400'> Current Bid </span>
-                        <p className='text-[15px] font-medium'> {`${price} ETH`} </p>
+                        <span className='text-sm text-gray-400'> Current Bid </span>
+                        <p className='text-base font-medium'> {`${price} ETH`} </p>
                     </div>
 
                     <button
