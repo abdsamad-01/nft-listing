@@ -17,7 +17,7 @@ const NFTCard = ({ key, id, image, title, price, creator }) => {
                 <img
                     src={image}
                     alt={id}
-                    className='rounded-t-xl w-full h-[65%] object-cover'
+                    className='rounded-t-xl w-full h-[62%] object-cover'
                 />
                 <div className='flex flex-col p-2'>
                     <p className='text-lg font-semibold'> {title} </p>
