@@ -1,26 +1,32 @@
-import React from 'react'
-import { BsArrowUpRight, BsCollection } from 'react-icons/bs'
+import React, { useState } from 'react'
+import { Modal } from '../components'
+import { BsArrowUpRightCircle, BsCollection } from 'react-icons/bs'
+import { AiOutlineFilter } from 'react-icons/ai'
 import { BiCategory, BiCategoryAlt } from 'react-icons/bi'
 import { MdOutlineMonetizationOn } from 'react-icons/md'
 import { NFTCard } from '../components'
 import { nftCards } from '../constants'
-import { Link } from 'react-router-dom'
 
 
 const Listings = () => {
+    const [openModal, setOpenModal] = useState(false);
+    const handleModal = () => {
+        setOpenModal(!openModal);
+        console.log(openModal)
+    }
+
     return (
-        <div className='lg:px-16 px-4 md:pt-40 pt-28 text-gray-50'>
+        <div className='lg:px-16 px-4 md:pt-40 pt-28 text-gray-50 relative'>
             <div className='flex flex-col items-center justify-center lg:px-0 px-2 text-center'>
                 <h2 className='md:text-5xl text-4xl font-semibold'> Trending Auctions Just For You </h2>
-                <p className='lg:text-base text-[17px] font-light mt-4 lg:w-1/4 w-full text-gray-100'> Collections of great aesthetic arts from Exclusivit, made and created with GustavoAI </p>
+                <p className='text-base font-light mt-4 lg:[27%] w-full text-gray-100'> Collections of great aesthetic NFTs from Exclusivit, made and created with GustavoAI </p>
 
-                <Link 
-                    className='bg-gray-50 mt-6 h-10 w-10 flex items-center cursor-pointer justify-center shadow-md rounded-full'
-                    to='#nfts'
+                <div 
+                    className='bg-gray-50 mt-6 h-9 w-9 flex items-center cursor-pointer justify-center shadow-md rounded-full'
                     onClick={() => window.scrollTo(300, 300)}
                 >
-                    <BsArrowUpRight className='w-4 h-4 object-contain text-gray-800' />
-                </Link>
+                    <BsArrowUpRightCircle className='w-6 h-6 object-contain text-gray-900' />
+                </div>
             </div>
 
             <div className='mt-10'>
@@ -42,7 +48,7 @@ const Listings = () => {
                     </div>
 
                     <div className='border border-gray-800 px-4 gap-2 flex flex-row items-center py-2 rounded-3xl cursor-pointer'>
-                        <BsCollection className='w-[18px] h-[18px] object-contain' />
+                        <AiOutlineFilter className='w-[18px] h-[18px] object-contain' />
                         <p className='text-[13px] satoshi'> Filter </p>
                     </div>
                 </div>
@@ -50,7 +56,7 @@ const Listings = () => {
             </div>
 
             {/* NFT Cards */}
-            <div className='mt-8 px-2 md:px-0 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6 relative'>
+            <div className='mt-8 lg:px-5 px-2 md:px-0 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6 relative'>
                 {nftCards.map(card => (
                     <NFTCard
                         key={card.id}
@@ -59,9 +65,12 @@ const Listings = () => {
                         title={card.title}
                         price={card.price}
                         creator={card.creator}
+                        handleModal={handleModal}
                     />
                 ))}
             </div>
+
+            {openModal && <Modal />}
         </div>
     )
 }
