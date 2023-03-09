@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Modal = ({ nft, onClose }) => {
     return (
-        <div className="fixed bottom-0 top-[40%] flex md:flex-row lg:mx-auto left-0 right-0 h-fit flex-col gap-3 bg-primary rounded-md lg:h-[40vh] lg:pb-0 pb-4 mx-3 lg:w-[550px] w-full shadow-sm items-center justify-center z-50 text-gray-50">
+        <div className="fixed bottom-0 lg:top-[40%] top-[20%] flex md:flex-row lg:mx-auto left-0 right-0 h-fit flex-col gap-3 bg-primary rounded-md lg:h-[40vh] lg:pb-0 pb-4  lg:w-[550px] w-full shadow-sm items-center justify-center z-50 text-gray-50">
             <MdClose className='absolute cursor-pointer top-2 right-5 w-5 h-5 object-contain' onClick={onClose} />
             <div className='lg:w-1/2 w-full lg:h-full'>
                 <img className='lg:h-full rounded-t-md rounded-b-md w-full object-cover' src={nft.image} alt={nft.title} />
