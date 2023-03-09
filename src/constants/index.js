@@ -47,7 +47,7 @@ export const nfts = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo dicta veritatis neque facere soluta laudantium porro quas recusandae eos.',
         title: 'Dayco Serpentine',
         price: 3.4,
-        creator: 'Gustavo Strato'
+        creator: '0x123456789abcdef'
     },
     {
         id: '#card02',
@@ -71,7 +71,7 @@ export const nfts = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo dicta veritatis neque facere soluta laudantium porro quas recusandae eos.',
         title: 'Magic Cube',
         price: 4.3,
-        creator: 'Gustavo Strato'
+        creator: '0x123456789abcdef'
     },
     {
         id: '#card05',
@@ -79,15 +79,15 @@ export const nfts = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo dicta veritatis neque facere soluta laudantium porro quas recusandae eos.',
         title: 'Smoky Puppy',
         price: 6.0,
-        creator: 'Gustavo Strato'
+        creator: '0x123456789abcdef'
     },
     {
         id: '#card06',
         image: 'https://cdn.dribbble.com/users/83671/screenshots/16893232/media/6049502e65402e72f7f3806920d6f569.png?compress=1&resize=400x300&vertical=top',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo dicta veritatis neque facere soluta laudantium porro quas recusandae eos.',
         title: 'Zombie Mole',
-        price: 3.4,
-        creator: 'Gustavo Strato'
+        price: 11.4,
+        creator: '0x123456789abcdef'
     },
     {
         id: '#card07',
@@ -95,14 +95,14 @@ export const nfts = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo dicta veritatis neque facere soluta laudantium porro quas recusandae eos.',
         title: 'Zombie Mole',
         price: 5.2,
-        creator: 'Gustavo Strato'
+        creator: '0x123456789abcdef'
     },
     {
         id: '#card08',
         image: 'https://i.pinimg.com/236x/fa/e7/c0/fae7c07c0a60bfc8c4db0f4b43a7fea3.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo dicta veritatis neque facere soluta laudantium porro quas recusandae eos.',
         title: 'Panda Rainos',
-        price: 3.4,
-        creator: 'Gustavo Strato'
+        price: 13.2,
+        creator: '0x123456789abcdef'
     },
 ]
