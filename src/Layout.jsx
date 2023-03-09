@@ -3,7 +3,7 @@ import { Navbar } from './components'
 
 const layout = (props) => {
     return (
-        <div className='bg-primary min-h-screen'>
+        <div className='bg-primary min-h-screen relative'>
             <Navbar />
             <main>
                 { props.children }
