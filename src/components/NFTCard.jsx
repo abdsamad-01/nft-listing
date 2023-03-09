@@ -1,20 +1,17 @@
 import React, { useState } from 'react'
 import Modal from './Modal';
 
-const NFTCard = ({ nft, showOverlay, setShowOverlay, handleOverlay }) => {
+const NFTCard = ({ nft, showOverlay, setShowOverlay }) => {
     const [showModal, setShowModal] = useState(false);
-
-    const handleCardClick = () => {
-        setShowModal(true);
-    };
 
     return (
         <div className=''>
-            {/* {openModal && <div className='absolute top-0 bg-red-800 right-0 w-full h-full' />} */}
-
             <div
                 className='text-gray-50 glass z-10 rounded-xl shadow-md relative lg:cursor-pointer h-[370px]'
-                onClick={handleCardClick}
+                onClick={() => {
+                    setShowModal(true)
+                    setShowOverlay(!showOverlay)
+                }}
             >
                 <img
                     src={nft.image}
@@ -37,19 +34,18 @@ const NFTCard = ({ nft, showOverlay, setShowOverlay, handleOverlay }) => {
                         className='px-5 text-[11px] py-2 font-medium text-white bg-bg-button rounded-md'
                         onClick={() => {
                             setShowOverlay(!showOverlay)
-                            handleOverlay
-                            console.log(showOverlay)
+                            // handleOverlay
                         }}
                     > View </button>
                 </div>
             </div>
 
-            {showModal && <Modal 
-                nft={nft} 
+            {showModal && <Modal
+                nft={nft}
                 onClose={() => {
                     setShowModal(false);
                     setShowOverlay(false);
-                }} 
+                }}
             />}
         </div>
 
