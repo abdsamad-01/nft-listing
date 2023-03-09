@@ -55,7 +55,7 @@ export const nfts = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo dicta veritatis neque facere soluta laudantium porro quas recusandae eos.',
         title: 'Dayco Serpentine',
         price: 9.0,
-        creator: 'Diego Mudryk'
+        creator: '0x123456789abcdef'
     },
     {
         id: '#card03',
@@ -63,7 +63,7 @@ export const nfts = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo dicta veritatis neque facere soluta laudantium porro quas recusandae eos.',
         title: 'Fintory Island',
         price: 7.5,
-        creator: 'Jay Paul'
+        creator: '0x123456789abcdef'
     },
     {
         id: '#card04',
