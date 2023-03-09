@@ -8,19 +8,19 @@ import { NFTCard } from '../components'
 import { nftCards } from '../constants'
 
 
-const Listings = () => {
-    const [openModal, setOpenModal] = useState(false);
-    const [cardId, setCardId] = useState('');
+const Listings = ({ nfts }) => {
+    // const [openModal, setOpenModal] = useState(false);
+    // const [cardId, setCardId] = useState('');
 
-    const handleId = (id) => {
-        setCardId(id);
-        console.log(cardId)
-    }
+    // const handleId = (id) => {
+    //     setCardId(id);
+    //     console.log(cardId)
+    // }
 
-    const handleModal = () => {
-        setOpenModal(!openModal);
-        // console.log(openModal)
-    }
+    // const handleModal = () => {
+    //     setOpenModal(!openModal);
+    //     // console.log(openModal)
+    // }
 
     return (
         <div className='lg:px-16 px-4 md:pt-40 pt-28 text-gray-50 relative'>
@@ -63,8 +63,8 @@ const Listings = () => {
             </div>
 
             {/* NFT Cards */}
-            <div className='mt-8 lg:px-5 px-2 md:px-0 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6 relative'>
-                {nftCards.map(card => (
+            <div className='mt-8 lg:px-5 px-2 md:px-0 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 grido gap-6 relative'>
+                {/* {nftCards.map(card => (
                     <div key={card.id}>
                         <NFTCard
                             id={card.id}
@@ -76,10 +76,23 @@ const Listings = () => {
                             handleId={handleId}
                         />
                     </div>
+                ))} */}
+
+                {nfts.map(nft => (
+                    <div key={nft.id}>
+                        <NFTCard
+                            key={nft.id}
+                            nft={nft}
+                        />
+                    </div>
                 ))}
+
             </div>
 
-            {openModal && <Modal />}
+            {/* {openModal && <Modal
+                openModal={openModal}
+                handleModal={handleModal}
+            />} */}
         </div>
     )
 }
