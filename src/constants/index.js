@@ -106,3 +106,9 @@ export const nfts = [
         creator: '0x123456789abcdef'
     },
 ]
+
+export const zomies = ['Explore', 'All NFTs', 'About']
+export const account = ['Profile', 'Favorites', 'Watchlist', 'My Collections', 'Settings']
+export const resources = ['Platform Status', 'Partners', 'Taxes', 'Newsletter']
+export const community = ['Help Center', 'Zomies Tokens', 'Suggest Feature', 'Subscribe']
+
