@@ -5,7 +5,7 @@ import { zomies, account, community, resources } from '../constants';
 
 const Footer = () => {
     return (
-        <div className='py-10 flex lg:flex-row flex-col gap-28 items-start justify-start lg:px-16 px-4 w-full'>
+        <div className='py-10 mt-20 flex lg:flex-row flex-col gap-28 items-start justify-start lg:px-16 px-4 w-full'>
             <div className='lg:w-1/4 w-full'>
                 <div className='flex flex-col'>
                     <Link
@@ -35,13 +35,13 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className='grid lg:grid-cols-4 grid-cols-2  gap-3 lg:w-3/4 w-full'>
+            <div className='grid lg:grid-cols-4 grid-cols-2 gap-3 lg:w-3/4 w-full'>
                 <div>
                     <p className='text-gray-300 text-base font-medium'> Zomies </p>
                     <ul className='mt-4 list-none'>
                         {zomies.map((link, idx) => <li
                             key={idx}
-                            className='text-gray-400 text-sm cursor-pointer my-3'
+                            className='text-gray-400 text-sm font-normal cursor-pointer my-3'
                         >
                             {link}
                         </li>)}
@@ -53,7 +53,7 @@ const Footer = () => {
                     <ul className='mt-4 list-none'>
                         {account.map((link, idx) => <li
                             key={idx}
-                            className='text-gray-400 text-sm cursor-pointer my-3'
+                            className='text-gray-400 text-sm font-normal cursor-pointer my-3'
                         >
                             {link}
                         </li>)}
@@ -65,7 +65,7 @@ const Footer = () => {
                     <ul className='mt-4 list-none'>
                         {resources.map((link, idx) => <li
                             key={idx}
-                            className='text-gray-400 text-sm cursor-pointer my-3'
+                            className='text-gray-400 text-sm font-normal cursor-pointer my-3'
                         >
                             {link}
                         </li>)}
@@ -77,7 +77,7 @@ const Footer = () => {
                     <ul className='mt-4 list-none'>
                         {community.map((link, idx) => <li
                             key={idx}
-                            className='text-gray-400 text-sm cursor-pointer my-3'
+                            className='text-gray-400 text-sm font-normal cursor-pointer my-3'
                         >
                             {link}
                         </li>)}

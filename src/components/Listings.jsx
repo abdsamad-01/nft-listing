@@ -15,7 +15,7 @@ const Listings = ({ nfts }) => {
     }
 
     return (
-        <div className='lg:px-16 px-4 w-full md:py-40 py-28 text-gray-50 relative'>
+        <div className='lg:px-16 px-4 w-full md:pt-40 pt-28 text-gray-50 relative'>
             {showOverlay && <div className='h-screen fixed w-full z-20 top-0 left-0 glass' />}
 
             <div className='flex flex-col items-center justify-center lg:px-0 px-2 text-center'>
